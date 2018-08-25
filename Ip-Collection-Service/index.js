@@ -6,11 +6,13 @@ const request = require('request');
 const cors = require('cors');
 
 const port = process.env.PORT || 3000;
-
+const password = process.env.PASSWORD || "";
+const user = process.env.USER || "root";
+const database = process.env.DATABASE || "ips";
+const host = process.env.HOST || "localhost";
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-
 // Generates a random IP address to be found
 function generateIP(min, max) {
     let num1;
@@ -25,10 +27,10 @@ function generateIP(min, max) {
 }
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'origin',
-    database: 'ips'
+    host: host,
+    user: user,
+    password: password,
+    database: database
 });
 
 setInterval(() => {

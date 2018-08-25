@@ -7,6 +7,7 @@ import { Request, Http, RequestMethod } from '@angular/http';
 })
 export class AppComponent implements OnInit {
   title = 'Cesium-IP-Viewer';
+  private url = "http://localhost:3000";
   constructor(private http: Http) { }
   ngOnInit() {
     const viewer = new Cesium.Viewer('cesiumContainer', {
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit {
     });
     const pointCollection = viewer.scene.primitives.add(new Cesium.PointPrimitiveCollection());
     // console.log('here');
-    this.http.request(new Request({ method: RequestMethod.Get, url: "http://192.168.0.29:3000" })).subscribe((body) => {
+    this.http.request(new Request({ method: RequestMethod.Get, url: this.url })).subscribe((body) => {
       //   console.log(body.json());
       body.json().forEach(group => {
         //  console.log(group.lon, group.lat);
