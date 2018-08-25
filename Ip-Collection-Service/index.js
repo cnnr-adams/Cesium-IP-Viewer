@@ -19,7 +19,7 @@ function generateIP(min, max) {
     do {
         num1 = Math.floor(Math.random() * (max - min + 1)) + min;
         // Private IP range
-    } while (num1 === 10 || num1 === 172 || num1 === 192);
+    } while (num1 === 10 || num1 === 127 || num1 === 192 || num1 === 172);
     let num2 = Math.floor(Math.random() * (max - min + 1)) + min;
     let num3 = Math.floor(Math.random() * (max - min + 1)) + min;
     let num4 = Math.floor(Math.random() * (max - min + 1)) + min;
