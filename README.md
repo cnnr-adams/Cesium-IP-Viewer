@@ -1,5 +1,5 @@
 # Cesium-IP-Viewer
-My first attempt at a simple full-stack application, this application displays the location of IP addresses on a Cesium map.
+My first attempt at a simple full-stack application, this application displays the location of IP addresses on a Cesium map. Currently has 30 000+ Ips layed out on the map
 
 ## The Stack
 ### Front-end
