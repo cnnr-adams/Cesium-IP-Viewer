@@ -12,6 +12,5 @@ export class RemoveCesiumStuffDirective implements OnInit {
     while (this.elementRef.nativeElement.firstChild.firstChild !== this.elementRef.nativeElement.firstChild.lastChild) {
       this.elementRef.nativeElement.firstChild.removeChild(this.elementRef.nativeElement.firstChild.lastChild)
     }
-    Cesium.Fullscreen.requestFullScreen(this.elementRef);
   }
 }

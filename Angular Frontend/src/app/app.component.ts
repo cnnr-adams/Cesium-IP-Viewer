@@ -17,11 +17,9 @@ export class AppComponent implements OnInit {
       })
     });
     const pointCollection = viewer.scene.primitives.add(new Cesium.PointPrimitiveCollection());
-    // console.log('here');
+
     this.http.request(new Request({ method: RequestMethod.Get, url: this.url })).subscribe((body) => {
-      //   console.log(body.json());
       body.json().forEach(group => {
-        //  console.log(group.lon, group.lat);
         pointCollection.add({
           position: new Cesium.Cartesian3.fromDegrees(group.lon, group.lat),
           color: new Cesium.Color(Math.random(), Math.random(), Math.random()),
