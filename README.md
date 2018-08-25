@@ -1,5 +1,5 @@
 # Cesium-IP-Viewer
-My first attempt at a simple full-stack application, this application displays the location of IP addresses on a Cesium map. Currently has 30000+ IPs layed out on the map
+A simple full-stack application that displays the location of random IP addresses on a Cesium map. Currently has 30000+ IPs layed out on the map
 
 ## Pictures
 ![1](https://raw.githubusercontent.com/cnnr-adams/Cesium-IP-Viewer/master/Ces2.PNG)
