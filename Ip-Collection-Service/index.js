@@ -52,7 +52,7 @@ setInterval(() => {
             }
         }
     });
-}, 500)
+}, 400)
 
 app.get("/", async function (req, res) {
     // Returns all IP data to caller
